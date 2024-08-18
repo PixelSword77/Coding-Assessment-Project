@@ -10,6 +10,11 @@
 	}
 </style>
 
+<?php
+	include 'db_connection.php';
+	$conn = OpenDatabaseConnection();
+?>
+
 <header><h1>Dev Flower Company</h1></header>
 
 <div class="row">
@@ -17,12 +22,17 @@
 		<header><h2>Products</h2></header>
 		<?php
 			include 'product_table.php';
-			ShowProductTable();
+			ShowProductTable($conn);
 		?>
 	</div>
 	<div class="colum" style="background-color:#aaa;"
-		<header><h2>Cart</h2></header>
-		<?php include 'cart.php' ?>
+		<?php 
+			include 'cart.php';
+			$total_subtotal = ShowCart($conn);
+			
+			include 'cart_price.php';
+			ShowTotal($total_subtotal);
+		?>
 	</div>
 </div>
 
