@@ -17,11 +17,12 @@
 		<header><h2>Products</h2></header>
 		<?php
 			include 'product_table.php';
+			ShowProductTable();
 		?>
 	</div>
 	<div class="colum" style="background-color:#aaa;"
 		<header><h2>Cart</h2></header>
-		<p>Items</p>
+		<?php include 'cart.php' ?>
 	</div>
 </div>
 
