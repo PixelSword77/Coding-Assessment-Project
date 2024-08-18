@@ -20,7 +20,7 @@ if ($conn -> connect_error) {
 	die("Connection failed: " . $conn -> connection_error);
 }
 
-echo "Connected successfully! <br>";
+#echo "Connected successfully! <br>";
 
 $sql = "Select * from " . $tablename;
 $result = $conn -> query($sql);
