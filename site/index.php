@@ -31,7 +31,7 @@
 			$total_subtotal = ShowCart($conn);
 			
 			include 'cart_price.php';
-			ShowTotal($total_subtotal);
+			ShowTotal($conn, $total_subtotal);
 		?>
 	</div>
 </div>

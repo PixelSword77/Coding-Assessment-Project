@@ -44,6 +44,7 @@ function ShowCart($conn) {
 		
 		# Generates the subtotal of our current quantity for this key/product
 		$product_subtotal = (float)$row['productPrice'] * $val;
+		
 		$total_subtotal += $product_subtotal;
 		
 		echo "
