@@ -10,7 +10,8 @@
 	}
 </style>
 
-<?php
+
+<?php # Initialize our database connection
 	include 'db_connection.php';
 	$conn = OpenDatabaseConnection();
 ?>
@@ -20,13 +21,13 @@
 <div class="row">
 	<div class="colum" style="background-color:#bbb;"
 		<header><h2>Products</h2></header>
-		<?php
+		<?php # Draw a table listing all of our products
 			include 'product_table.php';
 			ShowProductTable($conn);
 		?>
 	</div>
 	<div class="colum" style="background-color:#aaa;"
-		<?php 
+		<?php # Draw our cart and total
 			include 'cart.php';
 			$total_subtotal = ShowCart($conn);
 			

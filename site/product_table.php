@@ -40,7 +40,7 @@ function ShowProductTable($conn) {
 		}
 	}
 	else {
-		echo "No data in table";
+		echo "No products in the database.";
 	}
 
 	echo "</table>";

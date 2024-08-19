@@ -59,8 +59,7 @@ function ShowCart($conn) {
 }
 
 # Adds to or sets the value of our products for an item when the Add to Cart button is pressed
-function UpdateProductQuantity() {
-	$productCode = $_GET['productCode'];
+function UpdateProductQuantity($productCode) {
 	$quantity = $_GET['quantity'];
 	
 	# Validates the customer's input as a valid integer before proceeding, else we throw an error message
@@ -87,7 +86,7 @@ if(isset($_GET['clearCart'])) {
 }
 
 if(isset($_GET['productCode'])) {
-	UpdateProductQuantity();
+	UpdateProductQuantity($_GET['productCode']);
 }
 
 
